@@ -1,0 +1,36 @@
+module.exports = {
+    root: true,
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaVersion: 6,
+        sourceType: 'module'
+    },
+    plugins: [
+        '@typescript-eslint'
+    ],
+    rules: {
+        '@typescript-eslint/member-delimiter-style': [
+            'warn',
+            {
+                multiline: {
+                    delimiter: 'semi',
+                    requireLast: true
+                },
+                singleline: {
+                    delimiter: 'semi',
+                    requireLast: false
+                }
+            }
+        ],
+        '@typescript-eslint/semi': 'warn',
+        'curly': 'warn',
+        'eqeqeq': 'warn',
+        'no-throw-literal': 'warn',
+        'semi': 'off'
+    },
+    ignorePatterns: [
+        'out',
+        'dist',
+        '**/*.d.ts'
+    ]
+};
